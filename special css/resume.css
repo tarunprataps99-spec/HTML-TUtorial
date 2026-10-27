@@ -1,0 +1,240 @@
+ :root {
+            --primary-blue: #19426b;
+            --line-blue: #a3c2df;
+            --text-dark: #333333;
+            --text-light: #555555;
+            --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-dark);
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* For screen view */
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+            color: var(--primary-blue);
+        }
+
+        /* Container setup */
+        .resume-container {
+            width: 210mm; /* A4 width */
+            min-height: 297mm;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Headings & Text */
+        h1, h2, h3, h4, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: 13.5px;
+        }
+
+        /* Header Section */
+        .header {
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 15px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-dark);
+            align-items: center;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info i {
+            color: var(--primary-blue);
+            font-size: 14px;
+        }
+
+        .contact-info .separator {
+            color: var(--line-blue);
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 22px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1.5px;
+            background-color: var(--line-blue);
+            margin-left: 15px;
+        }
+
+        /* General Text */
+        p {
+            font-size: 13.5px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--line-blue);
+        }
+        
+        /* Remove border from last education item if needed, but image shows it */
+        .education-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .edu-details {
+            font-size: 13.5px;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        /* Technical Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .skill-col {
+            border-right: 1px solid var(--line-blue);
+            padding-right: 10px;
+        }
+
+        .skill-col:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .skill-col h4 {
+            font-size: 13.5px;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .skill-col ul {
+            padding-left: 15px;
+        }
+
+        .skill-col li {
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        /* Soft Skills Section */
+        .soft-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .soft-skills-grid li {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                padding: 0;
+            }
+            .resume-container {
+                width: 100%;
+                margin: 0;
+                padding: 20px 30px;
+                box-shadow: none;
+                min-height: auto;
+            }
+            /* Ensure background colors and borders print correctly */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }

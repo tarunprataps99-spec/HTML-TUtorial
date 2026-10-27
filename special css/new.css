@@ -1,0 +1,20 @@
+.box{
+    background-color:chartreuse;
+    hight:50px;
+    display:inline-block;
+    width: 100%;
+    max-width:700px;
+}
+.card{
+    width:250px;
+    padding:20px;
+    background-color:lightblue;
+    color:white;
+    background-image:url(./download\ \(2\).jpg);
+    background-postion:center;
+    background-size:cover;
+    /*background-repeat:no-repeat;*/
+    border:2px solid black;
+    /*border-top:5px solid black;8*/
+    border-radius:10px;
+}
